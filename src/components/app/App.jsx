@@ -9,6 +9,32 @@ import MoviesAddInfo from "../MoviesAddInfo/MoviesAddInfo";
 
  
 const App = () => {
+  const data = [
+    {
+      id:"1",
+      name : "Polat",
+      viewers:"122",
+      favourite:false
+    },
+    {
+      id:"2",
+      name:"Usmon",
+      viewers:"213",
+      favourite:false,
+    },
+    {
+      id:"3",
+      name:"Panoh",
+      viewers:"1234",
+      favourite:true
+    },
+    {
+      id:"4",
+      name:"Sotqin",
+      viewers:"990",
+      favourite:true
+    }
+  ]
   return (
     <div className="app font-monospace">
       {" "}
@@ -18,7 +44,7 @@ const App = () => {
           <SearchPanel />
           <AppFilter/>
         </div>
-        <MoviieList/>
+        <MoviieList data = {data}/>
         <MoviesAddInfo/> 
       </div>
     </div>

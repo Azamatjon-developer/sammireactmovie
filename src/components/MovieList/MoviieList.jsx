@@ -1,16 +1,14 @@
-import React from 'react'
-import "./MovieList.css"
-import MovieListItem from '../MovieListItem/MovieListItem'
-const MoviieList = () => {
+import React from "react";
+import "./MovieList.css";
+import MovieListItem from "../MovieListItem/MovieListItem";
+const MoviieList = ({ data }) => {
   return (
-    <div className='movieList'>
-      <MovieListItem/>
-      <MovieListItem/>
-      <MovieListItem/>
-      <MovieListItem/>
+    <ul className="movieList ">
+      {data.map((item) => (
+        <MovieListItem  key={item.id} {...item} />
+      ))}
+    </ul>
+  );
+};
 
-    </div>
-  )
-}
-
-export default MoviieList
+export default MoviieList;  

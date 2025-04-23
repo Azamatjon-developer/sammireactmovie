@@ -50,3 +50,9 @@
   background-color: #e0fbfc;
   color: #000;
 }
+
+
+.list-group-item.favourite .list-group-item-label , 
+.list-group-item.favourite .list-group-item-input   {
+  color: yellow;
+}

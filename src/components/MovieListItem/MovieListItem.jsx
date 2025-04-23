@@ -1,15 +1,15 @@
 import React from "react";
 import "./MovieListItem.css";
 
-const MovieListItem = () => {
+const MovieListItem = ({name,viewers,favourite}) => {
   return (
-    <div className="list-group-item">
+    <li className={`list-group-item ${favourite && 'favourite'}`}>
       <div className="movie-item-row">
-        <span className="list-group-item-label">Empire of Usman</span>
+        <span className="list-group-item-label">{name}</span>
         <input
           className="list-group-item-input"
           type="number"
-          defaultValue={"989"}
+          defaultValue={viewers}
         />
         <div className="btn-group">
           <button className="btn-cookie btn-sm" type="button">
@@ -23,7 +23,7 @@ const MovieListItem = () => {
           </button>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
